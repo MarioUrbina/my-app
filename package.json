@@ -15,6 +15,9 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "docker:build": "docker build . -t luga23/web-page",
+    "docker:run": "docker run -p 3000:80 luga23/web-page --name react",
+    "docker:stop": "docker rm -f react",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
